@@ -398,7 +398,7 @@ def plot_all_metrics_P2(processed_data, animal_ids, animal_names):
 ############################## Main function ####################################################      
 def main():
     st.title("Behavioral Data Analysis")
-    address = st.text_input("Enter address of the folder:")
+    address = {MouseData}
     #Check if the address exists
     if address:
         if not os.path.exists(address):
