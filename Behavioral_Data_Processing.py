@@ -4,7 +4,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import re
-import matplotlib.pyplot as plt
+import matplotlib as plt
 
 #st.set_page_config(layout="wide")
 
