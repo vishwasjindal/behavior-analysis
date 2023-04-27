@@ -398,9 +398,9 @@ def plot_all_metrics_P2(processed_data, animal_ids, animal_names):
 ############################## Main function ####################################################      
 def main():
     st.title("Behavioral Data Analysis")
-    github_folder = "https://github.com/vishwasjindal/behavior-analysis/tree/main/Mousedata"
+    address = "https://github.com/vishwasjindal/behavior-analysis/tree/main/Mousedata"
 
-    st.write(f"Using GitHub folder: {github_folder}")
+    st.write(f"Using GitHub folder: {address}")
     #Check if the address exists
     if address:
         if not os.path.exists(address):
