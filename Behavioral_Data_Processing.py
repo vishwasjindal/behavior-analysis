@@ -399,10 +399,6 @@ def plot_all_metrics_P2(processed_data, animal_ids, animal_names):
 ############################## Main function ####################################################      
 def main():
     st.title("Behavioral Data Analysis")
-  
-
-    # Clone the repository to the current directory
-    git.Git(".").clone("https://github.com/vishwasjindal/behavior-analysis.git")
 
     # Access the contents of the Mousedata folder
     address = "behavior-analysis/Mousedata"
