@@ -5,6 +5,7 @@ import numpy as np
 import pandas as pd
 import re
 import matplotlib.pyplot as plt
+import git
 
 #st.set_page_config(layout="wide")
 
@@ -398,7 +399,14 @@ def plot_all_metrics_P2(processed_data, animal_ids, animal_names):
 ############################## Main function ####################################################      
 def main():
     st.title("Behavioral Data Analysis")
-    address = "https://github.com/vishwasjindal/behavior-analysis/tree/main/Mousedata"
+  
+
+    # Clone the repository to the current directory
+    git.Git(".").clone("https://github.com/vishwasjindal/behavior-analysis.git")
+
+    # Access the contents of the Mousedata folder
+    address = "behavior-analysis/Mousedata"
+    #address = "https://github.com/vishwasjindal/behavior-analysis/tree/main/Mousedata"
 
     st.write(f"Using GitHub folder: {address}")
     #Check if the address exists
