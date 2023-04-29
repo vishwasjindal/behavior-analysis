@@ -401,8 +401,8 @@ def main():
     st.title("Behavioral Data Analysis")
 
     # Access the contents of the Mousedata folder
-    address = "behavior-analysis/Mousedata"
-    #address = "https://github.com/vishwasjindal/behavior-analysis/tree/main/Mousedata"
+    #address = "behavior-analysis/Mousedata"
+    address = "https://github.com/vishwasjindal/behavior-analysis/tree/main/Mousedata"
 
     st.write(f"Using GitHub folder: {address}")
     #Check if the address exists
