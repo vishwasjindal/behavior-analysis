@@ -400,11 +400,9 @@ def plot_all_metrics_P2(processed_data, animal_ids, animal_names):
 def main():
     st.title("Behavioral Data Analysis")
     import requests
-    # Access the contents of the Mousedata folder
-    #address = "behavior-analysis/Mousedata"
+    
+    address = "https://github.com/vishwasjindal/behavior-analysis/tree/main/Mousedata?access_token=<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>"
 
-    # Raw link to the Mousedata folder on GitHub
-    address = "https://raw.githubusercontent.com/vishwasjindal/behavior-analysis/main/Mousedata"
 
     # Check if the address exists
     response = requests.get(address)
