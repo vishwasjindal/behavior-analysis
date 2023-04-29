@@ -414,7 +414,11 @@ def main():
     st.write(f"Using GitHub folder: {address}")
     #Check if the address exists
     if address:
-        if not os.path.exists(address):
+        try:
+            response = requests.get(address)
+            response.raise_for_status()  # Raise an error if the response status code is not 2xx
+            subfolders = list_subfolders(address)
+        except (requests.exceptions.RequestException, OSError):
             st.error("Invalid address")
             return
         subfolders = list_subfolders(address)
