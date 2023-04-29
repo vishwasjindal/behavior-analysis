@@ -399,10 +399,18 @@ def plot_all_metrics_P2(processed_data, animal_ids, animal_names):
 ############################## Main function ####################################################      
 def main():
     st.title("Behavioral Data Analysis")
-
+    import requests
     # Access the contents of the Mousedata folder
     #address = "behavior-analysis/Mousedata"
+
+    # Raw link to the Mousedata folder on GitHub
     address = "https://raw.githubusercontent.com/vishwasjindal/behavior-analysis/main/Mousedata"
+
+    # Check if the address exists
+    response = requests.get(address)
+    if response.status_code == 404:
+        st.error("Invalid address")
+        return
 
 
     st.write(f"Using GitHub folder: {address}")
